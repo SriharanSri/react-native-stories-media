@@ -80,6 +80,8 @@ const Stories = (props: Props) => {
   return (
     <View style={styles.container}>
       <FlatList
+      showsHorizontalScrollIndicator={false}
+      showsVerticalScrollIndicator={false}
         data={props.data}
         horizontal
         keyExtractor={(item) => item.title}
