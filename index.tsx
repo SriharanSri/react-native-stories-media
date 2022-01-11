@@ -91,7 +91,8 @@ const Stories = (props: Props) => {
               <View style={[styles.superCircle, props.containerAvatarStyle]}>
                 <Image
                   style={[styles.circle, props.avatarStyle]}
-                  source={{ uri: item.profile }}
+                  // source={{ uri: item.profile }}
+                  source={{ uri: item.profile.includes('http')? item.profile : null } }
                 />
               </View>
 
