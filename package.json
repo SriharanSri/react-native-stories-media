@@ -1,6 +1,6 @@
 {
   "name": "react-native-stories-sri",
-  "version": "0.0.7",
+  "version": "0.1.7",
   "description": "Stories for React native Like Instagram, Whatsapp and Twitter",
   "main": "index.tsx",
   "scripts": {
