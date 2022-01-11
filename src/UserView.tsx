@@ -2,7 +2,6 @@
 import React, { memo } from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import profileimage from './imgs/profile.png'
 
 type Props = {
   onClosePress: () => void;
@@ -31,16 +30,12 @@ const diffDateWithNow = (date) => {
     return Math.trunc(hours) + " " + current;
   }
 };
-
+const imageurl = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
 export default memo(function UserView(props: Props) {
   return (
     <View style={styles.userView}>
-      <Image source={{ uri: props.profile.includes('http')? props.profile : null } } style={styles.image} />
-      {/* source={{
-                uri: userData.userPicture?.includes('http')
-                  ? userData.userPicture
-                  : apiConstants.baseUrl + userData.userPicture,
-              }} */}
+      <Image source={{ uri: props.profile ? props.profile : imageurl }} style={styles.image} />
+      
       <View style={{ flex: 1 }}>
         <View style={styles.barUsername}>
           <Text style={styles.name}>{props.name}</Text>

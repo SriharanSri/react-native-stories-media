@@ -76,7 +76,7 @@ const Stories = (props: Props) => {
       setCurrentScrollValue(scrollValue);
     }
   };
-
+  const imageurl = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
   return (
     <View style={styles.container}>
       <FlatList
@@ -91,8 +91,9 @@ const Stories = (props: Props) => {
               <View style={[styles.superCircle, props.containerAvatarStyle]}>
                 <Image
                   style={[styles.circle, props.avatarStyle]}
+                  source={{ uri: item.profile ? item.profile : imageurl }}
                   // source={{ uri: item.profile }}
-                  source={{ uri: item.profile.includes('http')? item.profile : null } }
+                  
                 />
               </View>
 
