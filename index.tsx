@@ -46,7 +46,7 @@ const Stories = (props: Props) => {
         try {
           modalScroll.current.scrollTo(newIndex, true);
         } catch (e) {
-          console.warn("error=>", e);
+          // console.warn("error=>", e);
         }
       }
     } else {
@@ -67,12 +67,12 @@ const Stories = (props: Props) => {
   const onScrollChange = (scrollValue) => {
     if (currentScrollValue > scrollValue) {
       onStoryNext(true);
-      console.log("next");
+      // console.log("next");
       setCurrentScrollValue(scrollValue);
     }
     if (currentScrollValue < scrollValue) {
       onStoryPrevious(false);
-      console.log("previous");
+      // console.log("previous");
       setCurrentScrollValue(scrollValue);
     }
   };
@@ -137,18 +137,18 @@ const Stories = (props: Props) => {
 
 const styles = new StyleSheet.create({
   boxStory: {
-    marginLeft: 15,
+    marginLeft: 10,
   },
   ItemSeparator: { height: 1, backgroundColor: "#ccc" },
   container: {
     flex: 1,
     backgroundColor: "rgba(255,255,255,255)",
-    paddingBottom: 5,
+    paddingBottom: 2,
   },
   circle: {
     width: 50,
     height: 50,
-    borderRadius: 60,
+    borderRadius: 100,
     borderWidth: 3,
     borderColor: "#FFF",
   },

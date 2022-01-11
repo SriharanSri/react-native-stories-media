@@ -34,7 +34,7 @@ const Story = (props: Props) => {
           source={{uri: url}}
           onLoadEnd={props.onImageLoaded}
           style={styles.content}
-          resizeMode="stretch"
+          resizeMode="contain"
           // width={ScreenWidth}
         />
       ) : (
@@ -49,15 +49,15 @@ const Story = (props: Props) => {
             setHeightScaled(heightScaled);
             props.onVideoLoaded(item);
 
-            console.warn(width, height, heightScaled);
-            console.warn('É PAISAGEM?', isPortrait);
+            // console.warn(width, height, heightScaled);
+            // console.warn('É PAISAGEM?', isPortrait);
           }}
           style={
             isPortation
               ? [styles.contentVideoPortation, {height: heightScaled}]
               : [styles.contentVideo, {height: heightScaled}]
           }
-          resizeMode={'stretch'}
+          resizeMode={'contain'}
         />
       )}
     </View>
