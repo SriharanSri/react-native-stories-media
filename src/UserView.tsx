@@ -5,7 +5,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 type Props = {
   onClosePress: () => void;
-  profile: string;
+  profile: '';
   name: string;
   datePublication: string;
 };
@@ -34,7 +34,7 @@ const imageurl = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-p
 export default memo(function UserView(props: Props) {
   return (
     <View style={styles.userView}>
-      <Image source={{ uri: props.profile ? props.profile : imageurl }} style={styles.image} />
+      <Image source={{ uri: props.profile }} style={styles.image} />
       
       <View style={{ flex: 1 }}>
         <View style={styles.barUsername}>
