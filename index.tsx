@@ -139,12 +139,10 @@ const Stories = (props: Props) => {
 
 const styles = new StyleSheet.create({
   boxStory: {
-    marginLeft: 10,
   },
-  ItemSeparator: { height: 1, backgroundColor: "#ccc" },
+  ItemSeparator: { height: 1, },
   container: {
     flex: 1,
-    backgroundColor: "rgba(255,255,255,255)",
     paddingBottom: 2,
   },
   circle: {

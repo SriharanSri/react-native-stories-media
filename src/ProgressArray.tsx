@@ -40,7 +40,7 @@ const ProgressArray = (props: Props) => {
         <ProgressBar
           index={index}
           key={i}
-          duration={props.duration || 6}
+          duration={props.duration || 3}
           isNewStory={props.isNewStory}
           currentIndex={props.currentIndex}
           next={props.next}
